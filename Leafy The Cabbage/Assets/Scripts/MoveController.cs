@@ -7,13 +7,6 @@ public class MoveController : MonoBehaviour
 
     public KeyCode LeftKey = KeyCode.A;
     public KeyCode RightKey = KeyCode.D;
-    public KeyCode UpKey = KeyCode.E;
-    public KeyCode DownKey = KeyCode.Q;
-    public KeyCode ForwardKey = KeyCode.W;
-    public KeyCode BackKey = KeyCode.S;
-
-    private float Speed { get; set; }
-    private float Acceleration { get; set; }
 
     // Use this for initialization
 	void Start () {
