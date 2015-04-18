@@ -47,9 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\FollowTarget.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Character\HealthComponent.cs" />
      <Compile Include="Assets\Scripts\MoveController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="LeafyTheCabbage.Domain">
+ <HintPath>C:/Workspace/LudumDare/LeafyTheCabbage/Leafy The Cabbage/Assets/Lib/LeafyTheCabbage.Domain.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
