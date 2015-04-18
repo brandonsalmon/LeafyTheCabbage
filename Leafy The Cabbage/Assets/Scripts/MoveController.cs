@@ -9,6 +9,8 @@ public class MoveController : MonoBehaviour
     public KeyCode RightKey = KeyCode.D;
     public KeyCode LeftShift = KeyCode.LeftShift;
 
+    public KeyCode PreviousKey;
+
     // Use this for initialization
 	void Start () {
 	}
@@ -17,6 +19,7 @@ public class MoveController : MonoBehaviour
 	void Update ()
 	{
 	    var rigidBody = GetComponent<Rigidbody2D>();
+	    var acceleration = 1f;
 
 	    if (Input.GetKey(LeftShift))
 	    {
@@ -25,11 +28,35 @@ public class MoveController : MonoBehaviour
 
         if (Input.GetKey(LeftKey))
         {
-            rigidBody.AddForce(Vector2.right * -MaxAcceleration, ForceMode2D.Force);
+            if (PreviousKey == RightKey)
+            {
+                // shoom
+                acceleration = -MaxAcceleration*100f;
+            }
+            else
+            {
+                acceleration = -MaxAcceleration;
+            }
+           
+            PreviousKey = LeftKey;
         }
         else if (Input.GetKey(RightKey))
         {
-            rigidBody.AddForce(Vector2.right * MaxAcceleration, ForceMode2D.Force);
+
+            if (PreviousKey == LeftKey)
+            {
+                // shoom 
+                acceleration = MaxAcceleration*100f;
+            }
+            else
+            {
+                acceleration = MaxAcceleration;
+            }
+
+
+            PreviousKey = RightKey;
         }
+
+        rigidBody.AddForce(Vector2.right * acceleration, ForceMode2D.Force);
 	}
 }
