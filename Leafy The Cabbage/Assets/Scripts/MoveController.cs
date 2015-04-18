@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    public float MaxAcceleration = 4f;
+    public float MaxAcceleration = 10f;
 
     public KeyCode LeftKey = KeyCode.A;
     public KeyCode RightKey = KeyCode.D;
+    public KeyCode LeftShift = KeyCode.LeftShift;
 
     // Use this for initialization
 	void Start () {
@@ -16,6 +17,12 @@ public class MoveController : MonoBehaviour
 	void Update ()
 	{
 	    var rigidBody = GetComponent<Rigidbody2D>();
+
+	    if (Input.GetKey(LeftShift))
+	    {
+	        MaxAcceleration = 20f;
+	    }
+
         if (Input.GetKey(LeftKey))
         {
             rigidBody.AddForce(Vector2.right * -MaxAcceleration, ForceMode2D.Force);
