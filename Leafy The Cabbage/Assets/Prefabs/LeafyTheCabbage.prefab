@@ -12,6 +12,7 @@ GameObject:
   - 60: {fileID: 6085572}
   - 50: {fileID: 5058412}
   - 114: {fileID: 11484870}
+  - 114: {fileID: 11481024}
   m_Layer: 0
   m_Name: LeafyTheCabbage
   m_TagString: Player
@@ -37,10 +38,10 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132638}
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 1.79999995
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -218,6 +219,24 @@ PolygonCollider2D:
       - {x: 2.67499995, y: -3.0250001}
       - {x: 2.67499995, y: -2.99499989}
       - {x: 2.64499998, y: -2.9849999}
+--- !u!114 &11481024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d789c42fe0721604e8cfadde984a5252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxAcceleration: 10
+  LeftKey: 97
+  RightKey: 100
+  SpaceKey: 32
+  LeftShift: 304
+  jumpHeight: 100
+  isJumping: 0
 --- !u!114 &11484870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +251,7 @@ MonoBehaviour:
   MaxAcceleration: 4
   LeftKey: 97
   RightKey: 100
+  LeftShift: 304
 --- !u!212 &21282734
 SpriteRenderer:
   m_ObjectHideFlags: 1
