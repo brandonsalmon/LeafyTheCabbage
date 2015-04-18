@@ -229,16 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e835206012a96f24db90b90113c6341c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
-  SpeedMultiplier: 8
-  SpeedMultiplierKey: 304
+  MaxAcceleration: 12
   LeftKey: 97
   RightKey: 100
-  UpKey: 101
-  DownKey: 113
-  ForwardKey: 119
-  BackKey: 115
-  rotationSpeed: 0
 --- !u!212 &21282734
 SpriteRenderer:
   m_ObjectHideFlags: 1
