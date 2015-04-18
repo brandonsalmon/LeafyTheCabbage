@@ -9,8 +9,8 @@ namespace Assets.Scripts.Character
 {
     public class CharacterController : MonoBehaviour
     {
-        public CharacterLifeState LifeState;
-        public CharacterMovementState MovementState;
+        public CharacterLifeState LifeState = CharacterLifeState.Alive;
+        public CharacterMovementState MovementState = CharacterMovementState.Idle;
 
         // Use this for initialization
         void Start()
@@ -21,6 +21,13 @@ namespace Assets.Scripts.Character
         // Update is called once per frame
         void Update()
         {
+            // Check if the character is dead
+            if(this.GetComponent<HealthComponent>().IsDead)
+            {
+                this.LifeState = CharacterLifeState.Dead;
+            }
+
+            this.GetComponent<MovementAnimationController>().SetState(MovementState);
         }
     }
 }
