@@ -11,6 +11,10 @@
 /*.userprefs
 /*.pidb
 /*.booproj
+*Assembly-CSharp-vs.csproj
+*Assembly-CSharp.csproj
+*Leafy The Cabbage-csharp.sln
+*Leafy The Cabbage.sln
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
