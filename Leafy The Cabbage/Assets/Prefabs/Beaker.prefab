@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6115960}
   - 50: {fileID: 5032844}
   m_Layer: 0
-  m_Name: beaker
+  m_Name: Beaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
