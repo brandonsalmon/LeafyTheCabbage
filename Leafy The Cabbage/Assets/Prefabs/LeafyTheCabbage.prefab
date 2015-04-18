@@ -9,10 +9,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 489626}
   - 212: {fileID: 21282734}
-  - 60: {fileID: 6085572}
   - 50: {fileID: 5058412}
   - 114: {fileID: 11484870}
+<<<<<<< HEAD
   - 114: {fileID: 11481024}
+=======
+  - 58: {fileID: 5831772}
+>>>>>>> 1c7111e882945e4bc476767b4213eb4ae491681a
   m_Layer: 0
   m_Name: LeafyTheCabbage
   m_TagString: Player
@@ -27,8 +30,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.11000013, y: 3.07999992, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalPosition: {x: -9.38000011, y: .330000013, z: 0}
+  m_LocalScale: {x: .183402777, y: .183402777, z: .366805553}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,17 +50,18 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!60 &6085572
-PolygonCollider2D:
+--- !u!58 &5831772
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132638}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 6ce53051efc04c041843497dd3a8c947, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD
   m_Points:
     m_Paths:
     - - {x: .985000014, y: -3.7249999}
@@ -237,6 +241,10 @@ MonoBehaviour:
   LeftShift: 304
   jumpHeight: 100
   isJumping: 0
+=======
+  serializedVersion: 2
+  m_Radius: 3.82914329
+>>>>>>> 1c7111e882945e4bc476767b4213eb4ae491681a
 --- !u!114 &11484870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e835206012a96f24db90b90113c6341c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxAcceleration: 4
+  MaxAcceleration: 5
   LeftKey: 97
   RightKey: 100
   LeftShift: 304
