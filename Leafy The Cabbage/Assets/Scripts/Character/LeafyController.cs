@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Character
 {
-    public class CharacterController : MonoBehaviour
+    public class LeafyController : MonoBehaviour
     {
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
@@ -21,13 +21,16 @@ namespace Assets.Scripts.Character
         // Update is called once per frame
         void Update()
         {
+            var healthComp = this.GetComponent<HealthComponent>();
             // Check if the character is dead
-            if(this.GetComponent<HealthComponent>().IsDead)
+            if (healthComp.IsDead)
             {
                 this.LifeState = CharacterLifeState.Dead;
             }
-
-            this.GetComponent<MovementAnimationController>().SetState(MovementState);
+            MovementState = CharacterMovementState.Jumping;
+            // Set appropriate sprites
+            //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
+            this.GetComponent<MovementSpriteController>().SetState(MovementState);
         }
     }
 }

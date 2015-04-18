@@ -10,8 +10,7 @@ namespace LeafyTheCabbage.Domain.Character
         Idle,
         Left,
         Right,
-        JumpAscend,
-        JumpDescend,
+        Jumping,
         Bouncing
     }
 }
