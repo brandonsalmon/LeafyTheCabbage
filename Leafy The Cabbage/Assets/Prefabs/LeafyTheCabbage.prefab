@@ -91,6 +91,7 @@ MonoBehaviour:
   LeftKey: 97
   RightKey: 100
   LeftShift: 304
+  PreviousKey: 0
 --- !u!212 &21282734
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +116,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a7e9df97f0572ef4e90d8c53f8b1df61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 508c8e1bd3dfe3f44b9a599ee033dc5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
