@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthComponent : MonoBehaviour {
+public class HealthComponent : MonoBehaviour
+{
 
-    public int CurrentHealth;
-    public int MaxHealth;
-    public int MinimumHealth;
+    public int CurrentHealth = 100;
+    public int MaxHealth = 100;
+    public int MinimumHealth = 0;
 
     public bool IsDead
     {
@@ -14,13 +15,15 @@ public class HealthComponent : MonoBehaviour {
             return CurrentHealth <= MinimumHealth;
         }
     }
-	// Use this for initialization
-	void Start () {
-	    
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        CurrentHealth--;
-	}
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 }
