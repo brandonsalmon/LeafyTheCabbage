@@ -73,6 +73,6 @@ public class MoveController : MonoBehaviour {
 
     void RotateRight()
     {
-        transform.Rotate(Vector3.forward * -3);
+        transform.Rotate(Vector3.back * 5);
     }
 }
