@@ -20,3 +20,10 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+*.unity diff
+*.asset diff
+
+# Previous "binary"
+*.unity             text eol=lf
+*.asset            text eol=lf
+*.prefab           text eol=lf
