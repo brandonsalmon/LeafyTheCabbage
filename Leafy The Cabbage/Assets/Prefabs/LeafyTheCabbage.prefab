@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473182}
+  - 114: {fileID: 11493494}
   m_Layer: 0
   m_Name: LeafyTheCabbage
   m_TagString: Untagged
@@ -245,6 +246,27 @@ PolygonCollider2D:
       - {x: 2.67499995, y: -3.0250001}
       - {x: 2.67499995, y: -2.99499989}
       - {x: 2.64499998, y: -2.9849999}
+--- !u!114 &11493494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e835206012a96f24db90b90113c6341c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 4
+  SpeedMultiplier: 8
+  SpeedMultiplierKey: 304
+  LeftKey: 97
+  RightKey: 100
+  UpKey: 101
+  DownKey: 113
+  ForwardKey: 119
+  BackKey: 115
+  rotationSpeed: 0
 --- !u!212 &21221778
 SpriteRenderer:
   m_ObjectHideFlags: 1
