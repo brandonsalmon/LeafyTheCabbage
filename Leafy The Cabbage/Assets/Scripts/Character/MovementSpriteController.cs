@@ -45,7 +45,7 @@ namespace Assets.Scripts.Character
             {
                 Debug.Log("Changing to sprite for state: " + state.ToString());  
                 currentState = state;
-                this.GetComponentInParent<SpriteRenderer>().sprite = SpriteLibrary[state];
+                //this.GetComponentInParent<SpriteRenderer>().sprite = SpriteLibrary[state];
             }
         }
     }

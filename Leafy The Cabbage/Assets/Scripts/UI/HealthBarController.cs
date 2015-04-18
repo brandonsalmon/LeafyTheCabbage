@@ -15,6 +15,7 @@ public class HealthBarController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-        HealthBar.text = "Health: " + this.GetComponent<HealthComponent>().CurrentHealth;
+        var healthComponent = (HealthComponent) GameObject.FindWithTag("Player").GetComponent("HealthComponent");
+	    HealthBar.text = "Health: " + healthComponent.CurrentHealth;
 	}
 }
