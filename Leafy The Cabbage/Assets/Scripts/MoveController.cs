@@ -1,13 +1,12 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
 
 public class MoveController : MonoBehaviour
 {
-    public float MaxSpeed = 10f;
-    public float MaxAcceleration = 0.01f;
+    public float MaxSpeed = 30f;
+    public float MaxAcceleration = 4f;
     public float SpeedMultiplier = 8f;
-    public float RotationSpeed = 5f;
+    public float RotationSpeed = 10f;
 
     public KeyCode SpeedMultiplierKey = KeyCode.LeftShift;
     public KeyCode LeftKey = KeyCode.A;
