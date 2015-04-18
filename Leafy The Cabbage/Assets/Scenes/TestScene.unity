@@ -210,11 +210,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -2.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3.70000005
+=======
+      value: -1.88999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.52999997
+>>>>>>> 58177fb514c60fdb57ca2f15867524617182124b
       objectReference: {fileID: 0}
     - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -247,6 +255,30 @@ Prefab:
     - target: {fileID: 5058412, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
       propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831772, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_Radius
+      value: 3.77800298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831772, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_Offset.y
+      value: -.100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831772, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_Offset.x
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11481024, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
@@ -771,8 +803,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 3
 --- !u!1 &1388320707
+=======
+  m_RootOrder: 4
+--- !u!1 &1388320707 stripped
+>>>>>>> 58177fb514c60fdb57ca2f15867524617182124b
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 132638, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
