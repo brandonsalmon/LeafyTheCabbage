@@ -23,7 +23,7 @@ namespace Assets.Scripts.Character
                     
                     var sprite = Resources.Load<Sprite>(state.ToString() + ".png"); 
                     SpriteLibrary.Add(state, sprite);
-                    Debug.Log("Loaded sprite for state: " + state.ToString());
+                    Debug.Log("Loaded sprite for state: " + state.ToString());  
                 }
                 catch
                 {
@@ -43,8 +43,9 @@ namespace Assets.Scripts.Character
         {
             if (SpriteLibrary.ContainsKey(state))
             {
+                Debug.Log("Changing to sprite for state: " + state.ToString());  
                 currentState = state;
-                this.GetComponent<SpriteRenderer>().sprite = SpriteLibrary[state];
+                this.GetComponentInParent<SpriteRenderer>().sprite = SpriteLibrary[state];
             }
         }
     }
