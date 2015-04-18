@@ -496,11 +496,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 402381172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac8a1f3a9035fa4582f75ddceacb289, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ComponentToFollow: {fileID: 733826599}
-  dampTime: .150000006
+  target: {fileID: 733826599}
+  damping: 1
+  lookAheadFactor: 3
+  lookAheadReturnSpeed: .5
+  lookAheadMoveThreshold: .100000001
 --- !u!1001 &515072749
 Prefab:
   m_ObjectHideFlags: 0
