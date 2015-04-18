@@ -4,8 +4,8 @@ using UnityEngine;
 public class MoveController : MonoBehaviour
 {
     public float MaxSpeed = 30f;
-    public float MaxAcceleration = 4f;
-    public float SpeedMultiplier = 8f;
+    public float MaxAcceleration = 20f;
+    public float SpeedMultiplier = 2f;
     public float RotationSpeed = 10f;
 
     public KeyCode SpeedMultiplierKey = KeyCode.LeftShift;
