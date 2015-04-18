@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
-public class MoveController : MonoBehaviour {
-
-    public float Speed = 4f;
+public class MoveController : MonoBehaviour
+{
+    public float MaxSpeed = 10f;
+    public float MaxAcceleration = 0.01f;
     public float SpeedMultiplier = 8f;
+    public float RotationSpeed = 5f;
 
     public KeyCode SpeedMultiplierKey = KeyCode.LeftShift;
     public KeyCode LeftKey = KeyCode.A;
@@ -14,65 +17,45 @@ public class MoveController : MonoBehaviour {
     public KeyCode ForwardKey = KeyCode.W;
     public KeyCode BackKey = KeyCode.S;
 
-    public float rotationSpeed;
-    //transform
-    Transform myTrans;
-    //object position
-    Vector3 myPos;
-    //object rotation
-    Vector3 myRot;
-    //object rotation 
-    float angle;
+    private float Speed { get; set; }
+    private float Acceleration { get; set; }
 
-	// Use this for initialization
+    // Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+        if (Input.GetKey(LeftKey))
+        {
+            Acceleration = -MaxAcceleration;
+        }
+        else if (Input.GetKey(RightKey))
+        {
+            Acceleration = MaxAcceleration;
+        }
+        else
+        {
+            Acceleration = Speed < 0f ? MaxAcceleration : Speed > 0f ? -MaxAcceleration : 0;
+        }
 
-        Vector3 movement = Vector3.zero;
+        Rotate();
 
-        //if (Input.GetKey(LeftKey)) movement = Vector3.left;
-        //if (Input.GetKey(RightKey)) movement = Vector3.right;
-        //if (Input.GetKey(UpKey)) movement = Vector3.up;
-        //if (Input.GetKey(DownKey)) movement = Vector3.down;
-        //if (Input.GetKey(ForwardKey)) movement = Vector3.forward;
-        //if (Input.GetKey(BackKey)) movement = Vector3.back;
-
-
+        var movement = Vector3.right;
         if (Input.GetKey(SpeedMultiplierKey))
         {
             movement *= SpeedMultiplier;
         }
 
+        Speed += Acceleration * Time.deltaTime;
+        Speed = Math.Min(Math.Max(Speed, -MaxSpeed), MaxSpeed);
 
-        if (Input.GetKey(LeftKey))
-        {
-            RotateLeft();
-            movement = Vector3.left;
-        }
-
-        if (Input.GetKey(RightKey))
-        {
-            RotateRight();
-            movement = Vector3.right;
-        }
-
-
-        gameObject.transform.position
-            += movement * Speed * Time.deltaTime;
+        transform.position += movement * Speed * Time.deltaTime;
 	}
 
-
-    void RotateLeft()
+    void Rotate()
     {
-        transform.Rotate(Vector3.forward * 5);
-    }
-
-    void RotateRight()
-    {
-        transform.Rotate(Vector3.back * 5);
+        transform.Rotate(Vector3.back * RotationSpeed * Speed / MaxSpeed);
     }
 }
