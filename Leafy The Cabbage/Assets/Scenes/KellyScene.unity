@@ -1101,9 +1101,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 761925142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045aedea038fce54aadc03bc1907b030, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f134a72db3255343959f70003cbc3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
 --- !u!114 &761925145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,6 +1800,20 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 199604, guid: a67553ab6feab8549968749ddc921f5b, type: 2}
   m_PrefabInternal: {fileID: 1565062665}
+--- !u!114 &1372405844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372405843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88878cde42ca7da408285dae16b0276b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 50
+  MaxHealth: 50
+  MinimumHealth: 0
 --- !u!114 &1372405848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,6 +1839,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: -10
   Pushback: 1
+--- !u!114 &1372405850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372405843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba5876a4ce10b440a94d72de4997046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletInstaKill: 0
+  BulletDamageAmount: -50
 --- !u!1 &1381970788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,7 +2482,7 @@ Transform:
   m_Children:
   - {fileID: 1960716355}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 21
 --- !u!1 &1747536061
 GameObject:
   m_ObjectHideFlags: 0
