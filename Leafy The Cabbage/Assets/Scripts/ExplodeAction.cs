@@ -10,10 +10,7 @@ public class ExplodeAction : MonoBehaviour
     public KeyCode ExplodeKey = KeyCode.E;
     public int Damage = -50;
 
-    void Start()
-    {
-
-    }
+	public AudioClip explodeSound;
 
     void Update()
     {
@@ -25,7 +22,6 @@ public class ExplodeAction : MonoBehaviour
 
     IEnumerator Delayed()
     {
-        //yield return new WaitForSeconds(Random.value);
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gameObject.transform.position, this.Radius);
         for (int i = 0; i < colliders.Length; i++)
@@ -34,16 +30,20 @@ public class ExplodeAction : MonoBehaviour
             {
                 AddExplosionForce(colliders[i].gameObject.GetComponent<Rigidbody2D>(), this.Power*100, gameObject.transform.position, this.Radius);
                 var health = colliders[i].gameObject.GetComponent<HealthComponent>();
-                Debug.Log("predamage");
+
                 if (health != null)
                 {
-                    Debug.Log("damage");
                     health.UpdateHealth(Damage);
+                    if (health.IsDead)
+                    {
+                        Destroy(colliders[i].gameObject);
+                    }
                 }
             }
         }
 
         gameObject.GetComponent<HealthComponent>().Kill();
+		gameObject.GetComponent<AudioSource>().PlayOneShot(explodeSound);
 
         yield return null;
     }

@@ -2000,19 +2000,6 @@ SpriteRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 132638, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
   m_PrefabInternal: {fileID: 1957125894}
---- !u!114 &761925143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 761925142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f134a72db3255343959f70003cbc3a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
-  BulletsEatHealth: 1
 --- !u!114 &761925145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2123,7 +2110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4cfd25318eb504eba24e85e8eb2abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: SceneGato
+  Scene: LadyBugMadness
 --- !u!212 &777748280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4283,6 +4270,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .494767159
       objectReference: {fileID: 0}
+    - target: {fileID: 11473320, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: Radius
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11484870, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
@@ -4521,11 +4512,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
       propertyPath: MaxHealth
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
       propertyPath: CurrentHealth
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
