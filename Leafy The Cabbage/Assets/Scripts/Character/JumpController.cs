@@ -9,7 +9,7 @@ public class JumpController : MonoBehaviour
     public KeyCode RightKey = KeyCode.D;
     public KeyCode SpaceKey = KeyCode.Space;
 
-    public float jumpHeight = 15;
+    public float jumpHeight = 25;
 
     public bool isJumping;
 
