@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -527,4 +526,6 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
->>>>>>> 1c7111e882945e4bc476767b4213eb4ae491681a
+
+/Leafy The Cabbage/Assembly-CSharp-firstpass-vs.csproj
+/Leafy The Cabbage/Assembly-CSharp-firstpass.csproj
