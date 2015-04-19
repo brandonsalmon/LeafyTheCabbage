@@ -19,6 +19,7 @@ public class PainController : MonoBehaviour
     {
         if (other.collider.tag == "Player")
         {
+            Debug.Log("Colliding");
             var leafy = other.collider;
             leafy.GetComponent<HealthComponent>().UpdateHealth(Damage);
             var difference = leafy.transform.position - transform.position;
