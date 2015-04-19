@@ -11,9 +11,11 @@ namespace Assets.Scripts.Character
     {
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
+        
 
         public GameObject Leafy;
         public HealthComponent HealthComp;
+        private MoveController moveController;
 
         public Rect HealthBar;
 
@@ -23,6 +25,7 @@ namespace Assets.Scripts.Character
             Leafy = gameObject;
             HealthComp = this.GetComponent<HealthComponent>();
             HealthBar = new Rect(50, Screen.height - 50, Screen.width, Screen.height);
+            this.moveController = this.gameObject.GetComponent<MoveController>();
         }
 
         // Update is called once per frame
@@ -34,7 +37,8 @@ namespace Assets.Scripts.Character
                 this.LifeState = CharacterLifeState.Dead;
                 ResetLeafyAtCheckpoint();
             }
-            MovementState = CharacterMovementState.Jumping;
+            MovementState = moveController.MovementState;
+
             // Set appropriate sprites
             //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Character\CharacterLifeState.cs" />
     <Compile Include="Character\CharacterMovementState.cs" />
+    <Compile Include="Character\Orientation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
