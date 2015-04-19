@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11485726}
   - 114: {fileID: 11486372}
   - 114: {fileID: 11457988}
+  - 82: {fileID: 8215426}
   m_Layer: 0
   m_Name: LeafyTheCabbage
   m_TagString: Player
@@ -64,6 +65,75 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.41131592
+--- !u!82 &8215426
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +191,8 @@ MonoBehaviour:
   RightKey: 100
   LeftShift: 304
   PreviousKey: 0
+  MovementState: 0
+  Orientation: 0
 --- !u!114 &11485726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,8 +206,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeState: 0
   MovementState: 0
+  deathSound: {fileID: 8300000, guid: 343c7d7a3cd121344b9592d7282dbe51, type: 3}
   Leafy: {fileID: 0}
   HealthComp: {fileID: 0}
+  HealthBar:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!114 &11486372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f0ac77f18bff043b37e3dba163d1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites: []
 --- !u!212 &21282734
 SpriteRenderer:
   m_ObjectHideFlags: 1
