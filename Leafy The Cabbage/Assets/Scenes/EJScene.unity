@@ -235,11 +235,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529898176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136, y: 6.79999924, z: 0}
-  m_LocalScale: {x: 19.6001167, y: 39.7230339, z: 10.4534149}
+  m_LocalPosition: {x: 31, y: -1.60000038, z: -.100000001}
+  m_LocalScale: {x: 9.80005836, y: 19.861517, z: 10.4534149}
   m_Children: []
-  m_Father: {fileID: 2008074591}
-  m_RootOrder: 0
+  m_Father: {fileID: 1215750827}
+  m_RootOrder: 4
 --- !u!1 &559901409
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +649,7 @@ Transform:
   - {fileID: 2008074591}
   - {fileID: 1498962458}
   - {fileID: 921510354}
+  - {fileID: 529898180}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!114 &1215750828
@@ -895,6 +896,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WingDelay: 1
   EnemyToChase: {fileID: 2008074591}
+--- !u!114 &2097761873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097761867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36370377028844642ad6e915e4737a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: -10
+  Pushback: 1
 --- !u!1001 &2100925469
 Prefab:
   m_ObjectHideFlags: 0
