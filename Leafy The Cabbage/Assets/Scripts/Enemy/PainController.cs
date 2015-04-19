@@ -7,21 +7,11 @@ public class PainController : MonoBehaviour
 
     public bool Pushback = true;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnCollide(Collider2D leafy)
     {
-        if (other.collider.tag == "Player")
+        if (leafy.tag == "Player")
         {
-            var leafy = other.collider;
+            Debug.Log("Colliding");
             leafy.GetComponent<HealthComponent>().UpdateHealth(Damage);
 
             if (Pushback)
@@ -30,5 +20,15 @@ public class PainController : MonoBehaviour
                 leafy.GetComponent<Rigidbody2D>().AddForce(difference * 10, ForceMode2D.Impulse);
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        OnCollide(other);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        OnCollide(other.collider);
     }
 }
