@@ -891,7 +891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430810, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 122458, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_Name
@@ -1465,7 +1465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430810, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 122458, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_Name
@@ -2469,7 +2469,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430810, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c309e8657bc7954498223af449568d4c, type: 2}
@@ -3136,7 +3136,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430810, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 122458, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_Name
@@ -3224,7 +3224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430810, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 122458, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_Name
@@ -3866,7 +3866,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430810, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 122458, guid: c309e8657bc7954498223af449568d4c, type: 2}
       propertyPath: m_Name
@@ -4613,7 +4613,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
 --- !u!1 &2052927535
 GameObject:
   m_ObjectHideFlags: 0
