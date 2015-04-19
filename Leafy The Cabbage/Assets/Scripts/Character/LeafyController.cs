@@ -1,5 +1,5 @@
 ﻿using LeafyTheCabbage.Domain.Character;
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +11,8 @@ namespace Assets.Scripts.Character
     {
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
-        
-		public AudioClip deathSound;
+
+        public AudioClip deathSound;
 
         public GameObject Leafy;
         public HealthComponent HealthComp;
@@ -33,10 +33,13 @@ namespace Assets.Scripts.Character
         void Update()
         {
             // Check if the character is dead
-            if (HealthComp.IsDead)
+            if (HealthComp.IsDead && !HealthComp.Respawning)
             {
+                HealthComp.Respawning = true;
+
+                gameObject.GetComponent<ParticleSystem>().Play();
                 this.LifeState = CharacterLifeState.Dead;
-				this.GetComponent<AudioSource>().PlayOneShot(deathSound);
+                this.GetComponent<AudioSource>().PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
             }
             MovementState = moveController.MovementState;
@@ -48,8 +51,15 @@ namespace Assets.Scripts.Character
 
         public void ResetLeafyAtCheckpoint()
         {
-            Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
             HealthComp.ResetHealth();
+            Leafy.GetComponent<Renderer>().enabled = false;
+            StartCoroutine(Delayed());
+        }
+
+        IEnumerator Delayed()
+        {
+            yield return new WaitForSeconds(Random.value);
+            Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
         }
 
         // HEALTH BAR:
