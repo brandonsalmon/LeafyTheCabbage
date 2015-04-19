@@ -11,10 +11,7 @@ public class JumpController : MonoBehaviour {
 
     public bool isJumping;
 
-    // Use this for initialization
-    void Start()
-    {
-    }
+	public AudioClip jumpSound;
 
     // Update is called once per frame
     void Update()
@@ -25,6 +22,7 @@ public class JumpController : MonoBehaviour {
         {
             if (!isJumping)
             {
+				this.GetComponent<AudioSource>().PlayOneShot(jumpSound);
                 rigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
                 isJumping = true;
             }
