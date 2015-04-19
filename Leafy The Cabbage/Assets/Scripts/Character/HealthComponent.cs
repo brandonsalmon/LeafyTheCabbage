@@ -16,6 +16,8 @@ public class HealthComponent : MonoBehaviour
         }
     }
 
+    public bool Respawning { get; set; }
+
     // Use this for initialization
     void Start()
     {
@@ -39,6 +41,8 @@ public class HealthComponent : MonoBehaviour
         {
             CurrentHealth = MinimumHealth;
         }
+
+        CurrentHealth = health;
     }
 
     public void ResetHealth()

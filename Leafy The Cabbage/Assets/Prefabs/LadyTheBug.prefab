@@ -11,6 +11,9 @@ GameObject:
   - 212: {fileID: 21288338}
   - 60: {fileID: 6041128}
   - 50: {fileID: 5036274}
+  - 114: {fileID: 11415242}
+  - 114: {fileID: 11446372}
+  - 114: {fileID: 11416530}
   m_Layer: 0
   m_Name: LadyTheBug
   m_TagString: Untagged
@@ -127,6 +130,46 @@ PolygonCollider2D:
       - {x: .99407959, y: -2.01349616}
       - {x: 1.78733063, y: -2.02791333}
       - {x: 2.76033783, y: -1.989079}
+--- !u!114 &11415242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88878cde42ca7da408285dae16b0276b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 100
+  MaxHealth: 100
+  MinimumHealth: 0
+--- !u!114 &11416530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36370377028844642ad6e915e4737a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: -10
+  Pushback: 1
+--- !u!114 &11446372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba5876a4ce10b440a94d72de4997046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletInstaKill: 0
+  BulletDamageAmount: -10
 --- !u!212 &21288338
 SpriteRenderer:
   m_ObjectHideFlags: 1
