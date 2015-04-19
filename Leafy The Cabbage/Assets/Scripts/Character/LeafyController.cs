@@ -12,25 +12,35 @@ namespace Assets.Scripts.Character
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
 
+        public GameObject Leafy;
+        public HealthComponent HealthComp;
+
         // Use this for initialization
         void Start()
         {
-
+            Leafy = gameObject;
+            HealthComp = this.GetComponent<HealthComponent>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            var healthComp = this.GetComponent<HealthComponent>();
             // Check if the character is dead
-            if (healthComp.IsDead)
+            if (HealthComp.IsDead)
             {
                 this.LifeState = CharacterLifeState.Dead;
+                ResetLeafyAtCheckpoint();
             }
             MovementState = CharacterMovementState.Jumping;
             // Set appropriate sprites
             //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);
+        }
+
+        public void ResetLeafyAtCheckpoint()
+        {
+            Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
+            HealthComp.ResetHealth();
         }
     }
 }

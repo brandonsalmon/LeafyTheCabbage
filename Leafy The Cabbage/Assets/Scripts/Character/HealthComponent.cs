@@ -40,4 +40,14 @@ public class HealthComponent : MonoBehaviour
             CurrentHealth = MinimumHealth;
         }
     }
+
+    public void ResetHealth()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
+    public void Kill()
+    {
+        CurrentHealth = MinimumHealth;
+    }
 }
