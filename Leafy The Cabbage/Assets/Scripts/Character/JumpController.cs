@@ -20,7 +20,7 @@ public class JumpController : MonoBehaviour
     {
         var rigidBody = GetComponent<Rigidbody2D>();
 
-        if (Input.GetKey(SpaceKey) || CrossPlatformInputManager.GetButton("Jump"))
+        if (Input.GetKey(SpaceKey) || CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             if (!isJumping)
             {

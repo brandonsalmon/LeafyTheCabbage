@@ -16,7 +16,7 @@ public class ExplodeAction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(this.ExplodeKey) || CrossPlatformInputManager.GetButton("Explode"))
+        if (Input.GetKeyDown(this.ExplodeKey) || CrossPlatformInputManager.GetButtonDown("Explode"))
         {
             StartCoroutine(this.Delayed());
         }
