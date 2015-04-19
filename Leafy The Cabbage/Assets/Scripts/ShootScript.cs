@@ -18,7 +18,7 @@ public class ShootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Slash) || CrossPlatformInputManager.GetButton("Shoot"))
+        if (Input.GetKeyDown(KeyCode.Slash) )//|| CrossPlatformInputManager.GetButton("Shoot"))
         {
             // Create a new bullet at “transform.position”
             // Which is the current position of the game object

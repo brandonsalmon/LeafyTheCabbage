@@ -8,6 +8,7 @@ public class ExplodeAction : MonoBehaviour
     public float Power;
     public float Radius;
     public KeyCode ExplodeKey = KeyCode.E;
+    public int Damage = -50;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class ExplodeAction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(this.ExplodeKey) || CrossPlatformInputManager.GetButton("Explode"))
+        if (Input.GetKeyDown(this.ExplodeKey)) //|| CrossPlatformInputManager.GetButton("Explode"))
         {
             StartCoroutine(this.Delayed());
         }
@@ -30,7 +31,16 @@ public class ExplodeAction : MonoBehaviour
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)
-                AddExplosionForce(colliders[i].gameObject.GetComponent<Rigidbody2D>(), this.Power * 100, gameObject.transform.position, this.Radius);
+            {
+                AddExplosionForce(colliders[i].gameObject.GetComponent<Rigidbody2D>(), this.Power*100, gameObject.transform.position, this.Radius);
+                var health = colliders[i].gameObject.GetComponent<HealthComponent>();
+                Debug.Log("predamage");
+                if (health != null)
+                {
+                    Debug.Log("damage");
+                    health.UpdateHealth(Damage);
+                }
+            }
         }
 
         gameObject.GetComponent<HealthComponent>().Kill();
