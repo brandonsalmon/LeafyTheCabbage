@@ -47,10 +47,10 @@ namespace Assets.Scripts.Character
         public void SetState(CharacterMovementState state)
         {
             if (SpriteLibrary.ContainsKey(state))
-            {
-                //Debug.Log("Changing to sprite for state: " + state.ToString());  
+            { 
                 currentState = state;
                 renderer.sprite = SpriteLibrary[state];
+                this.GetComponentInParent<SpriteRenderer>().sprite = SpriteLibrary[state];
             }
         }
     }

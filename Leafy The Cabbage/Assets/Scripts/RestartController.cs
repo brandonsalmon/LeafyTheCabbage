@@ -8,7 +8,7 @@ public class RestartController : MonoBehaviour
         if (other.tag == "Player")
         {
             var level = gameObject.GetComponentInParent<LevelController>();
-            level.ReloadPlayerAtCheckpoint();
+            level.ReloadPlayerAtCheckpoint(other.gameObject);
         }
     }
 }

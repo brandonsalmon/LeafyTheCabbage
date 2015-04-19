@@ -26,4 +26,28 @@ public class HealthComponent : MonoBehaviour
     void Update()
     {
     }
+
+    public void UpdateHealth(int amount)
+    {
+        var health = CurrentHealth += amount;
+
+        if (health > MaxHealth)
+        {
+            CurrentHealth = 100;
+        }
+        else if (health < MinimumHealth)
+        {
+            CurrentHealth = MinimumHealth;
+        }
+    }
+
+    public void ResetHealth()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
+    public void Kill()
+    {
+        CurrentHealth = MinimumHealth;
+    }
 }

@@ -13,6 +13,10 @@ GameObject:
   - 114: {fileID: 11484870}
   - 58: {fileID: 5831772}
   - 114: {fileID: 11448520}
+  - 114: {fileID: 11474558}
+  - 114: {fileID: 11485726}
+  - 114: {fileID: 11486372}
+  - 114: {fileID: 11457988}
   m_Layer: 0
   m_Name: LeafyTheCabbage
   m_TagString: Player
@@ -59,7 +63,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.5999999
+  m_Radius: 2.41131592
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,6 +80,31 @@ MonoBehaviour:
   SpaceKey: 32
   jumpHeight: 15
   isJumping: 0
+--- !u!114 &11457988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88878cde42ca7da408285dae16b0276b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 100
+  MaxHealth: 100
+  MinimumHealth: 0
+--- !u!114 &11474558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823076709aa00f54c9fe1859d53037ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,6 +121,32 @@ MonoBehaviour:
   RightKey: 100
   LeftShift: 304
   PreviousKey: 0
+--- !u!114 &11485726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8bf72df6690ee448e709f1dbbad024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeState: 0
+  MovementState: 0
+  Leafy: {fileID: 0}
+  HealthComp: {fileID: 0}
+--- !u!114 &11486372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f0ac77f18bff043b37e3dba163d1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21282734
 SpriteRenderer:
   m_ObjectHideFlags: 1

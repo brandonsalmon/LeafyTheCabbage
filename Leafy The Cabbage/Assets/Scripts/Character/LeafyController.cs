@@ -11,37 +11,49 @@ namespace Assets.Scripts.Character
     {
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
-        private HealthComponent healthComp;
+        
+
+        public GameObject Leafy;
+        public HealthComponent HealthComp;
         private MoveController moveController;
+
+        public Rect HealthBar;
 
         // Use this for initialization
         void Start()
         {
-            this.healthComp = this.gameObject.GetComponent<HealthComponent>();
+            Leafy = gameObject;
+            HealthComp = this.GetComponent<HealthComponent>();
+            HealthBar = new Rect(50, Screen.height - 50, Screen.width, Screen.height);
             this.moveController = this.gameObject.GetComponent<MoveController>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            //if (healthComp == null)
-            //{
-            //    healthComp = this.gameObject.GetComponent<HealthComponent>();
-            //}
-            //if (moveController == null)
-            //{
-            //    moveController = this.gameObject.GetComponent<MoveController>();
-            //}
             // Check if the character is dead
-            if (healthComp.IsDead)
+            if (HealthComp.IsDead)
             {
                 this.LifeState = CharacterLifeState.Dead;
+                ResetLeafyAtCheckpoint();
             }
             MovementState = moveController.MovementState;
-            Debug.Log("Current moveController state: " + moveController.MovementState.ToString());
+
             // Set appropriate sprites
             //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);
+        }
+
+        public void ResetLeafyAtCheckpoint()
+        {
+            Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
+            HealthComp.ResetHealth();
+        }
+
+        // HEALTH BAR:
+        void OnGUI()
+        {
+            GUI.Label(HealthBar, "Health: " + HealthComp.CurrentHealth);
         }
     }
 }
