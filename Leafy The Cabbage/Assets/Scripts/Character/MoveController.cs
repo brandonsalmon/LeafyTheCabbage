@@ -1,6 +1,7 @@
 ﻿using LeafyTheCabbage.Domain.Character;
-using System;
 using UnityEngine;
+
+using UnityStandardAssets.CrossPlatformInput;
 
 public class MoveController : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class MoveController : MonoBehaviour
             MaxAcceleration = 25f;
         }
 
-        if (Input.GetKey(LeftKey))
+        if (Input.GetKey(LeftKey) || CrossPlatformInputManager.GetAxis("Horizontal") < 0)
         {
             acceleration = -MaxAcceleration;
             this.Orientation = Orientation.Left;
@@ -70,7 +71,7 @@ public class MoveController : MonoBehaviour
 
             PreviousKey = LeftKey;
         }
-        else if (Input.GetKey(RightKey))
+        else if (Input.GetKey(RightKey) || CrossPlatformInputManager.GetAxis("Horizontal") > 0)
         {
             acceleration = MaxAcceleration;
             this.Orientation = Orientation.Right;
