@@ -15,11 +15,14 @@ namespace Assets.Scripts.Character
         public GameObject Leafy;
         public HealthComponent HealthComp;
 
+        public Rect HealthBar;
+
         // Use this for initialization
         void Start()
         {
             Leafy = gameObject;
             HealthComp = this.GetComponent<HealthComponent>();
+            HealthBar = new Rect(50, Screen.height - 50, Screen.width, Screen.height);
         }
 
         // Update is called once per frame
@@ -41,6 +44,12 @@ namespace Assets.Scripts.Character
         {
             Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
             HealthComp.ResetHealth();
+        }
+
+        // HEALTH BAR:
+        void OnGUI()
+        {
+            GUI.Label(HealthBar, "Health: " + HealthComp.CurrentHealth);
         }
     }
 }
