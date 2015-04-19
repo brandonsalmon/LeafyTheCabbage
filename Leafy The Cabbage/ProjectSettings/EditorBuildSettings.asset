@@ -10,6 +10,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PatrickScene.unity
   - enabled: 1
-    path: Assets/Scenes/SceneGato.unity
-  - enabled: 1
     path: Assets/Scenes/KellyScene.unity
+  - enabled: 1
+    path: Assets/Scenes/LadyBugMadness.unity
+  - enabled: 1
+    path: Assets/Scenes/VenisOverlord.unity
+  - enabled: 1
+    path: Assets/Scenes/SceneGato.unity

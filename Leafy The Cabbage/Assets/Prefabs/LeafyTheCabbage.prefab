@@ -165,7 +165,7 @@ MonoBehaviour:
   LeftKey: 97
   RightKey: 100
   SpaceKey: 32
-  jumpHeight: 15
+  jumpHeight: 25
   isJumping: 0
   jumpSound: {fileID: 8300000, guid: d9362c4f8320c1e4f86cde6130c96416, type: 3}
 --- !u!114 &11457988
