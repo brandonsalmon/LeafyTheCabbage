@@ -1304,6 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: -10
+  Pushback: 1
 --- !u!114 &941382283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,6 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: -10
+  Pushback: 1
 --- !u!1 &1188961912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,7 +2096,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6117384, guid: 105822ea3c91ac048b85405d1484c04a, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 105822ea3c91ac048b85405d1484c04a, type: 2}
