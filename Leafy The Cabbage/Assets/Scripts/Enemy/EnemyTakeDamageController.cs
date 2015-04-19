@@ -8,9 +8,11 @@ public class EnemyTakeDamageController : MonoBehaviour
 
     public int BulletDamageAmount = -10;
 
+    private HealthComponent health;
+
 	// Use this for initialization
 	void Start () {
-	
+        health = gameObject.GetComponent<HealthComponent>();
 	}
 	
 	// Update is called once per frame
@@ -22,26 +24,31 @@ public class EnemyTakeDamageController : MonoBehaviour
     {
         if (col.gameObject.tag == "Bullet")
         {
+            // Get rid of the bullet
+            Destroy(col.gameObject);
+
             if (BulletInstaKill)
             {
                 KillEnemy();
             }
             else
             {
-                var healthComponent = gameObject.GetComponent<HealthComponent>();
-                if (healthComponent)
+                if (health != null)
                 {
-                    if (healthComponent.IsDead)
+                    if (health.IsDead)
                     {
+                        Debug.Log("kill1");
                         KillEnemy();
                     }
                     else
                     {
-                        healthComponent.UpdateHealth(BulletDamageAmount);
+                        Debug.Log("doin damage: " + health.CurrentHealth);
+                        health.UpdateHealth(BulletDamageAmount);
                     }
                 }
                 else
                 {
+                    Debug.Log("kill2");
                     KillEnemy();
                 }
             }

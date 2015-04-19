@@ -11,6 +11,9 @@ GameObject:
   - 212: {fileID: 21211974}
   - 60: {fileID: 6014294}
   - 50: {fileID: 5013332}
+  - 114: {fileID: 11442874}
+  - 114: {fileID: 11498504}
+  - 114: {fileID: 11488454}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -84,6 +87,46 @@ PolygonCollider2D:
       - {x: .388240814, y: -.883899689}
       - {x: .69301796, y: -.813899994}
       - {x: .924339294, y: -.578680038}
+--- !u!114 &11442874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88878cde42ca7da408285dae16b0276b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 100
+  MaxHealth: 50
+  MinimumHealth: 0
+--- !u!114 &11488454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36370377028844642ad6e915e4737a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: -10
+  Pushback: 1
+--- !u!114 &11498504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba5876a4ce10b440a94d72de4997046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletInstaKill: 0
+  BulletDamageAmount: -10
 --- !u!212 &21211974
 SpriteRenderer:
   m_ObjectHideFlags: 1
