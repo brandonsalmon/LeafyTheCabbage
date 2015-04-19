@@ -62,5 +62,4 @@ public class EnemyTakeDamageController : MonoBehaviour
 
         Destroy(gameObject);
     }
-
 }

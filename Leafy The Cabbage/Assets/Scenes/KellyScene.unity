@@ -2565,7 +2565,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 23
 --- !u!1 &1127956809 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 199604, guid: a67553ab6feab8549968749ddc921f5b, type: 2}
@@ -2822,7 +2822,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
 --- !u!1001 &1292566571
 Prefab:
   m_ObjectHideFlags: 0
@@ -4483,7 +4483,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 24
 --- !u!1 &2052927535
 GameObject:
   m_ObjectHideFlags: 0
