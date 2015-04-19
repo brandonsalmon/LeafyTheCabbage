@@ -346,7 +346,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 489626, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484870, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: MovementState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831772, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6ce53051efc04c041843497dd3a8c947, type: 2}
+    m_RemovedComponents:
+    - {fileID: 11486372, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 75d1b5c29b8af6f4ab600ee96bdbb45c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &960222444
@@ -432,6 +449,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f0ac77f18bff043b37e3dba163d1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 21300000, guid: 199ce226d31b03b46a6a2aab9a6caba7, type: 3}
+  - {fileID: 21300000, guid: af5c5a05884c5314da50dd20e64a29d4, type: 3}
+  - {fileID: 21300000, guid: d2fb786995e0a294099be8f6db3d8871, type: 3}
+  - {fileID: 21300000, guid: f14bbbbced0370a4f9ab19fad7ff8241, type: 3}
+  - {fileID: 21300000, guid: f6c319df38ad5034ea832a49ccb49029, type: 3}
 --- !u!114 &2143368352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,19 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823076709aa00f54c9fe1859d53037ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2143368353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2143368350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b8bf72df6690ee448e709f1dbbad024, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LifeState: 0
-  MovementState: 0
 --- !u!114 &2143368360
 MonoBehaviour:
   m_ObjectHideFlags: 0
