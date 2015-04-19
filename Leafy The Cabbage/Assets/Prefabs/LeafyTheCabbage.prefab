@@ -150,6 +150,7 @@ MonoBehaviour:
   SpaceKey: 32
   jumpHeight: 15
   isJumping: 0
+  jumpSound: {fileID: 8300000, guid: d9362c4f8320c1e4f86cde6130c96416, type: 3}
 --- !u!114 &11457988
 MonoBehaviour:
   m_ObjectHideFlags: 1

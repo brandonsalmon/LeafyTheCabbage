@@ -5,6 +5,8 @@ public class PainController : MonoBehaviour
 {
     public int Damage = -10;
 
+    public bool Pushback = true;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -21,8 +23,12 @@ public class PainController : MonoBehaviour
         {
             var leafy = other.collider;
             leafy.GetComponent<HealthComponent>().UpdateHealth(Damage);
-            var difference = leafy.transform.position - transform.position;
-            leafy.GetComponent<Rigidbody2D>().AddForce(difference * 10, ForceMode2D.Impulse);
+
+            if (Pushback)
+            {
+                var difference = leafy.transform.position - transform.position;
+                leafy.GetComponent<Rigidbody2D>().AddForce(difference * 10, ForceMode2D.Impulse);
+            }
         }
     }
 }
