@@ -37,7 +37,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 174490}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 26.250351, y: -7.49113798}
   serializedVersion: 2
@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: -1000
+  Pushback: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

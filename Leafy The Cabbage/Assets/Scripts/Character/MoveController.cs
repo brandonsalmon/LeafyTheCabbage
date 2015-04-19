@@ -82,6 +82,10 @@ public class MoveController : MonoBehaviour
 
             PreviousKey = RightKey;
         }
+        else
+        {
+            acceleration = 0;
+        }
 
         
         rigidBody.AddForce(Vector2.right * acceleration, ForceMode2D.Force);
