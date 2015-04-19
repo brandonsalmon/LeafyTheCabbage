@@ -9,25 +9,30 @@ namespace Assets.Scripts.Character
 {
     public class MovementSpriteController : MonoBehaviour
     {
-        public Dictionary<CharacterMovementState, Sprite> SpriteLibrary = new Dictionary<CharacterMovementState,Sprite>();
+        public List<Sprite> Sprites;
+        public Dictionary<CharacterMovementState, Sprite> SpriteLibrary;
 
         private CharacterMovementState currentState;
+        private SpriteRenderer renderer;
 
         // Use this for initialization
         void Start()
         {
+            renderer = this.gameObject.GetComponent<SpriteRenderer>();
+            SpriteLibrary = new Dictionary<CharacterMovementState,Sprite>();
             foreach (CharacterMovementState state in Enum.GetValues(typeof(CharacterMovementState)))
             {
                 try
                 {
-                    
-                    var sprite = Resources.Load<Sprite>(state.ToString() + ".png"); 
-                    SpriteLibrary.Add(state, sprite);
-                    Debug.Log("Loaded sprite for state: " + state.ToString());  
+                    var sprite = Sprites.Where(x => x.name == state.ToString()).Single();
+                    if(sprite != null)
+                    {
+                        Debug.Log("Added sprite for state: " + state.ToString());
+                        SpriteLibrary.Add(state, sprite);
+                    }
                 }
-                catch
+                catch (Exception e)
                 {
-
                 }
                 
             }
@@ -42,10 +47,10 @@ namespace Assets.Scripts.Character
         public void SetState(CharacterMovementState state)
         {
             if (SpriteLibrary.ContainsKey(state))
-            {
-                Debug.Log("Changing to sprite for state: " + state.ToString());  
+            { 
                 currentState = state;
-                //this.GetComponentInParent<SpriteRenderer>().sprite = SpriteLibrary[state];
+                renderer.sprite = SpriteLibrary[state];
+                this.GetComponentInParent<SpriteRenderer>().sprite = SpriteLibrary[state];
             }
         }
     }

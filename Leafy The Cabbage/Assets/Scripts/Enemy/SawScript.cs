@@ -18,8 +18,7 @@ public class SawScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            var level = gameObject.GetComponentInParent<LevelController>();
-            level.ReloadPlayerAtCheckpoint(other.gameObject);
+            other.gameObject.GetComponent<HealthComponent>().Kill();
         }
         else
         {

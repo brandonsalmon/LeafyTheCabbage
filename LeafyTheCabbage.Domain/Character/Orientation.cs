@@ -5,12 +5,11 @@ using System.Text;
 
 namespace LeafyTheCabbage.Domain.Character
 {
-    public enum CharacterMovementState
+    public enum Orientation
     {
-        Idle,
-        Walking,
-        Running,
-        Jumping,
-        Bouncing
+        Left,
+        Up,
+        Right,
+        Down
     }
 }
