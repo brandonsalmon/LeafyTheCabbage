@@ -38,6 +38,7 @@ public class LevelController : MonoBehaviour
         body.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
 
         player.GetComponent<Renderer>().enabled = true;
+        player.GetComponent<HealthComponent>().Respawning = false;
 
         yield return null;
     }

@@ -16,6 +16,8 @@ public class HealthComponent : MonoBehaviour
         }
     }
 
+    public bool Respawning { get; set; }
+
     // Use this for initialization
     void Start()
     {
