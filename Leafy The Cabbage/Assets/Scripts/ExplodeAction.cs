@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+using UnityStandardAssets.CrossPlatformInput;
+
 public class ExplodeAction : MonoBehaviour
 {
     public float Power;
@@ -14,7 +16,7 @@ public class ExplodeAction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(this.ExplodeKey))
+        if (Input.GetKeyDown(this.ExplodeKey) || CrossPlatformInputManager.GetButton("Explode"))
         {
             StartCoroutine(this.Delayed());
         }
