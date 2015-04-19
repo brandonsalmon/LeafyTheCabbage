@@ -12,6 +12,7 @@ namespace Assets.Scripts.Character
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
         
+		public AudioClip deathSound;
 
         public GameObject Leafy;
         public HealthComponent HealthComp;
@@ -35,6 +36,7 @@ namespace Assets.Scripts.Character
             if (HealthComp.IsDead)
             {
                 this.LifeState = CharacterLifeState.Dead;
+				this.GetComponent<AudioSource>().PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
             }
             MovementState = moveController.MovementState;
