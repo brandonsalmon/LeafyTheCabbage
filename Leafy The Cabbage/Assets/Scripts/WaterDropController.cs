@@ -22,6 +22,8 @@ public class WaterDropController : MonoBehaviour
         {
             obj.GetComponent<HealthComponent>().UpdateHealth(Health);
 
+            // TODO: play a noise
+
             // Remove this drop
             Destroy(gameObject);
         }

@@ -22,7 +22,7 @@ public class SawScript : MonoBehaviour
         }
         else
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }

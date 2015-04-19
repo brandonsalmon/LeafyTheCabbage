@@ -1316,6 +1316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af089d0b3a9dfbb4994b895793b5c0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpForce: 150
 --- !u!4 &1019309287 stripped
 Transform:
   m_PrefabParentObject: {fileID: 474946, guid: f2758debb612a5a4397016e9966c2d5a, type: 2}
@@ -1453,6 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af089d0b3a9dfbb4994b895793b5c0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpForce: 150
 --- !u!114 &1115974523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,7 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4cfd25318eb504eba24e85e8eb2abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: SceneGato
+  Scene: KellyScene
 --- !u!61 &1188961915
 BoxCollider2D:
   m_ObjectHideFlags: 0

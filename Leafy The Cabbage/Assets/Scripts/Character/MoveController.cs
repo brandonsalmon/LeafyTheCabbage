@@ -16,19 +16,21 @@ public class MoveController : MonoBehaviour
     public Orientation Orientation;
 
     // Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	    var rigidBody = GetComponent<Rigidbody2D>();
-	    var acceleration = 1f;
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        var rigidBody = GetComponent<Rigidbody2D>();
+        var acceleration = 0f;
 
         if (rigidBody.velocity == Vector2.zero)
         {
             this.MovementState = CharacterMovementState.Idle;
-        }else
+        }
+        else
         {
             this.MovementState = CharacterMovementState.Walking;
         }
@@ -46,36 +48,34 @@ public class MoveController : MonoBehaviour
             }
         }
 
-	    if (Input.GetKey(LeftShift))
-	    {
+        if (Input.GetKey(LeftShift))
+        {
             this.MovementState = CharacterMovementState.Running;
-	        MaxAcceleration = 20f;
-	    }
+            MaxAcceleration = 50f;
+        }
+        else
+        {
+            MaxAcceleration = 25f;
+        }
 
         if (Input.GetKey(LeftKey))
         {
+            acceleration = -MaxAcceleration;
             this.Orientation = Orientation.Left;
-            if (PreviousKey == RightKey)
-            {
-                // shoom
-                acceleration = -MaxAcceleration*100f;
-            }
-            else
+
+            if (rigidBody.velocity.x > 0)
             {
                 acceleration = -MaxAcceleration;
             }
-           
+
             PreviousKey = LeftKey;
         }
         else if (Input.GetKey(RightKey))
         {
+            acceleration = MaxAcceleration;
             this.Orientation = Orientation.Right;
-            if (PreviousKey == LeftKey)
-            {
-                // shoom 
-                acceleration = MaxAcceleration*100f;
-            }
-            else
+
+            if (rigidBody.velocity.x < 0)
             {
                 acceleration = MaxAcceleration;
             }
@@ -87,7 +87,9 @@ public class MoveController : MonoBehaviour
             acceleration = 0;
         }
 
-        
-        rigidBody.AddForce(Vector2.right * acceleration, ForceMode2D.Force);
-	}
+        if (rigidBody.velocity.magnitude < 50f)
+        {
+            rigidBody.AddForce(Vector2.right * acceleration, ForceMode2D.Force);
+        }
+    }
 }
