@@ -10,10 +10,7 @@ public class ExplodeAction : MonoBehaviour
     public KeyCode ExplodeKey = KeyCode.E;
     public int Damage = -50;
 
-    void Start()
-    {
-
-    }
+	public AudioClip explodeSound;
 
     void Update()
     {
@@ -46,6 +43,7 @@ public class ExplodeAction : MonoBehaviour
         }
 
         gameObject.GetComponent<HealthComponent>().Kill();
+		gameObject.GetComponent<AudioSource>().PlayOneShot(explodeSound);
 
         yield return null;
     }
