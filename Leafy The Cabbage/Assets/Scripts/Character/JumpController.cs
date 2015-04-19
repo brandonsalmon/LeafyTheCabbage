@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class JumpController : MonoBehaviour {
+using UnityStandardAssets.CrossPlatformInput;
+
+public class JumpController : MonoBehaviour
+{
 
     public KeyCode LeftKey = KeyCode.A;
     public KeyCode RightKey = KeyCode.D;
@@ -11,18 +13,18 @@ public class JumpController : MonoBehaviour {
 
     public bool isJumping;
 
-	public AudioClip jumpSound;
+    public AudioClip jumpSound;
 
     // Update is called once per frame
     void Update()
     {
         var rigidBody = GetComponent<Rigidbody2D>();
 
-        if (Input.GetKey(SpaceKey))
+        if (Input.GetKey(SpaceKey) || CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             if (!isJumping)
             {
-				this.GetComponent<AudioSource>().PlayOneShot(jumpSound);
+                this.GetComponent<AudioSource>().PlayOneShot(jumpSound);
                 rigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
                 isJumping = true;
             }

@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
+  BulletsEatHealth: 1
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,7 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 100
   MaxHealth: 100
-  MinimumHealth: 0
+  MinHealth: 0
+  takeDamageSound: {fileID: 8300000, guid: 343c7d7a3cd121344b9592d7282dbe51, type: 3}
 --- !u!114 &11473320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +197,8 @@ MonoBehaviour:
   Power: 100
   Radius: 5
   ExplodeKey: 101
+  Damage: -50
+  explodeSound: {fileID: 8300000, guid: edd7ff30d7289104083d085d3f7c859f, type: 3}
 --- !u!114 &11474558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeState: 0
   MovementState: 0
-  deathSound: {fileID: 8300000, guid: 343c7d7a3cd121344b9592d7282dbe51, type: 3}
   Leafy: {fileID: 0}
   HealthComp: {fileID: 0}
   HealthBar:
@@ -246,6 +249,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  deathSound: {fileID: 8300000, guid: 179bb1cc4a371864896882795242abdb, type: 3}
 --- !u!114 &11486372
 MonoBehaviour:
   m_ObjectHideFlags: 1

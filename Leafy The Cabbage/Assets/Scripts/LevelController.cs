@@ -5,6 +5,14 @@ public class LevelController : MonoBehaviour
 {
     private Vector2 LastCheckpoint { get; set; }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void SetLastCheckpoint(Vector2 position)
     {
         this.LastCheckpoint = position;

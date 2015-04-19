@@ -12,13 +12,14 @@ namespace Assets.Scripts.Character
         public CharacterLifeState LifeState = CharacterLifeState.Alive;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
 
-        public AudioClip deathSound;
-
         public GameObject Leafy;
         public HealthComponent HealthComp;
         private MoveController moveController;
+		private AudioSource audio;
 
         public Rect HealthBar;
+
+		public AudioClip deathSound;
 
         // Use this for initialization
         void Start()
@@ -27,6 +28,7 @@ namespace Assets.Scripts.Character
             HealthComp = this.GetComponent<HealthComponent>();
             HealthBar = new Rect(50, Screen.height - 50, Screen.width, Screen.height);
             this.moveController = this.gameObject.GetComponent<MoveController>();
+			this.audio = this.gameObject.GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -39,7 +41,7 @@ namespace Assets.Scripts.Character
 
                 gameObject.GetComponent<ParticleSystem>().Play();
                 this.LifeState = CharacterLifeState.Dead;
-                this.GetComponent<AudioSource>().PlayOneShot(deathSound);
+				this.audio.PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
             }
             MovementState = moveController.MovementState;

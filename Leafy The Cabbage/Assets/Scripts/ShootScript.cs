@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+using UnityStandardAssets.CrossPlatformInput;
 
 public class ShootScript : MonoBehaviour
 {
@@ -8,14 +9,16 @@ public class ShootScript : MonoBehaviour
 
     public bool BulletsEatHealth = true;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Slash))
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Slash) )//|| CrossPlatformInputManager.GetButton("Shoot"))
         {
             // Create a new bullet at “transform.position”
             // Which is the current position of the game object
@@ -27,5 +30,5 @@ public class ShootScript : MonoBehaviour
                 health.UpdateHealth(-5);
             }
         }
-	}
+    }
 }
