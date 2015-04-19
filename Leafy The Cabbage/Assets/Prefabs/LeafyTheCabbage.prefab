@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e615f0780d51737499f5f914630cb712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Power: 50
+  Power: 100
   Radius: 5
   ExplodeKey: 101
 --- !u!114 &11474558

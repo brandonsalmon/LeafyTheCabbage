@@ -12,9 +12,9 @@ public class ExplodeAction : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKey(this.ExplodeKey))
+        if (Input.GetKeyDown(this.ExplodeKey))
         {
             StartCoroutine(this.Delayed());
         }
@@ -22,7 +22,7 @@ public class ExplodeAction : MonoBehaviour
 
     IEnumerator Delayed()
     {
-        yield return new WaitForSeconds(Random.value);
+        //yield return new WaitForSeconds(Random.value);
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gameObject.transform.position, this.Radius);
         for (int i = 0; i < colliders.Length; i++)
@@ -32,6 +32,8 @@ public class ExplodeAction : MonoBehaviour
         }
 
         gameObject.GetComponent<HealthComponent>().Kill();
+
+        yield return null;
     }
 
     public static void AddExplosionForce(Rigidbody2D body, float expForce, Vector3 expPosition, float expRadius)
