@@ -16,13 +16,15 @@ public class SawScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        var healthComponent = other.gameObject.GetComponent<HealthComponent>();
+
+        if (healthComponent != null)
         {
             other.gameObject.GetComponent<HealthComponent>().Kill();
         }
         else
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }

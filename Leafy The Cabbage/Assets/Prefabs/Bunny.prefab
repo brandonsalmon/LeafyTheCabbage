@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11442874}
   - 114: {fileID: 11498504}
   - 114: {fileID: 11488454}
+  - 82: {fileID: 8254466}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -87,6 +88,75 @@ PolygonCollider2D:
       - {x: .388240814, y: -.883899689}
       - {x: .69301796, y: -.813899994}
       - {x: .924339294, y: -.578680038}
+--- !u!82 &8254466
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199604}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11442874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletInstaKill: 0
   BulletDamageAmount: -10
+  deathSound: {fileID: 8300000, guid: 343c7d7a3cd121344b9592d7282dbe51, type: 3}
 --- !u!212 &21211974
 SpriteRenderer:
   m_ObjectHideFlags: 1

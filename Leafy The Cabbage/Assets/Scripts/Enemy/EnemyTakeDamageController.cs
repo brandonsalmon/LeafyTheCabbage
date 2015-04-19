@@ -10,6 +10,8 @@ public class EnemyTakeDamageController : MonoBehaviour
 
     private HealthComponent health;
 
+    public AudioClip deathSound;
+
 	// Use this for initialization
 	void Start () {
         health = gameObject.GetComponent<HealthComponent>();
@@ -37,18 +39,15 @@ public class EnemyTakeDamageController : MonoBehaviour
                 {
                     if (health.IsDead)
                     {
-                        Debug.Log("kill1");
                         KillEnemy();
                     }
                     else
                     {
-                        Debug.Log("doin damage: " + health.CurrentHealth);
                         health.UpdateHealth(BulletDamageAmount);
                     }
                 }
                 else
                 {
-                    Debug.Log("kill2");
                     KillEnemy();
                 }
             }
@@ -59,7 +58,8 @@ public class EnemyTakeDamageController : MonoBehaviour
 
     void KillEnemy()
     {
-        // TODO: noise!
+        this.GetComponent<AudioSource>().PlayOneShot(deathSound);
+
         Destroy(gameObject);
     }
 

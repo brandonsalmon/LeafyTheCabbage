@@ -39,8 +39,10 @@ public class HealthComponent : MonoBehaviour
         {
             CurrentHealth = MinimumHealth;
         }
-
-        CurrentHealth = health;
+        else
+        {
+            CurrentHealth = health;
+        }
     }
 
     public void ResetHealth()

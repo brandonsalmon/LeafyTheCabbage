@@ -11,7 +11,6 @@ public class PainController : MonoBehaviour
     {
         if (leafy.tag == "Player")
         {
-            Debug.Log("Colliding");
             leafy.GetComponent<HealthComponent>().UpdateHealth(Damage);
 
             if (Pushback)
