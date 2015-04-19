@@ -3,57 +3,58 @@ using System.Collections;
 
 public class HealthComponent : MonoBehaviour
 {
+	private AudioSource audio;
 
     public int CurrentHealth = 100;
     public int MaxHealth = 100;
-    public int MinimumHealth = 0;
+    public int MinHealth = 0;
+
+	public AudioClip takeDamageSound;
 
     public bool IsDead
     {
         get
         {
-            return CurrentHealth <= MinimumHealth;
+            return CurrentHealth <= MinHealth;
         }
     }
 
     public bool Respawning { get; set; }
 
-    // Use this for initialization
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+		this.audio = gameObject.GetComponent<AudioSource>();
     }
 
     public void UpdateHealth(int amount)
     {
-        var health = CurrentHealth += amount;
+        var newHealth = CurrentHealth + amount;
 
-        if (health > MaxHealth)
+        if (newHealth > MaxHealth)
         {
-            CurrentHealth = 100;
+            CurrentHealth = MaxHealth;
         }
-        else if (health < MinimumHealth)
+        else if (newHealth <= MinHealth)
         {
-            CurrentHealth = MinimumHealth;
+            CurrentHealth = MinHealth;
         }
         else
         {
-            CurrentHealth = health;
+			if (amount < 0)
+			{
+				this.audio.PlayOneShot(takeDamageSound);
+			}
+            CurrentHealth = newHealth;
         }
     }
 
     public void ResetHealth()
     {
-        CurrentHealth = MaxHealth;
+		CurrentHealth = MaxHealth;
     }
 
     public void Kill()
     {
-        CurrentHealth = MinimumHealth;
+		CurrentHealth = MinHealth;
     }
 }
