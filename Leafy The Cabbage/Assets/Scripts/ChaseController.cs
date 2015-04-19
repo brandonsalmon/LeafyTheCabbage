@@ -6,8 +6,6 @@ public class ChaseController : MonoBehaviour
 
     public float WingDelay = 1;
     public Component EnemyToChase;
- 
-    
     private float _nextMoveTime;
 
     // Use this for initialization
@@ -26,11 +24,11 @@ public class ChaseController : MonoBehaviour
         }
 
         var enemyBody = this.EnemyToChase.GetComponent<Rigidbody2D>();
-        var positionToChase = enemyBody.position;
         var body = this.GetComponent<Rigidbody2D>();
-        var destination = positionToChase - body.position;
 
-        body.AddForce(destination, ForceMode2D.Impulse);
+        body.velocity = (transform.position - 
+            enemyBody.transform.position).normalized
+               * (-7);
 
         this._nextMoveTime = this.WingDelay;
     }
