@@ -6,6 +6,7 @@ public class BunnyAttackController : MonoBehaviour
 {
     private float _nextJumpTime;
     private bool _isJumping = false;
+    public int JumpForce = 150;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,7 @@ public class BunnyAttackController : MonoBehaviour
 	    if (_nextJumpTime < 0 && !_isJumping)
 	    {
 	        var rigidBody = GetComponent<Rigidbody2D>();
-            rigidBody.AddForce(Vector2.up * 150, ForceMode2D.Impulse);
+            rigidBody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
 	        _isJumping = true;
 	    }
 	}
