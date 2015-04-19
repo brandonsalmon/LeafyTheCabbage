@@ -740,11 +740,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 312053910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac8a1f3a9035fa4582f75ddceacb289, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ComponentToFollow: {fileID: 761925148}
-  dampTime: .150000006
+  target: {fileID: 0}
+  damping: .150000006
+  lookAheadFactor: 3
+  lookAheadReturnSpeed: .5
+  lookAheadMoveThreshold: .100000001
 --- !u!1 &312074668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeState: 0
   MovementState: 0
-  deathSound: {fileID: 0}
   Leafy: {fileID: 0}
   HealthComp: {fileID: 0}
   HealthBar:
@@ -2063,6 +2065,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  deathSound: {fileID: 0}
 --- !u!114 &761925152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,7 +2079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 100
   MaxHealth: 100
-  MinimumHealth: 0
+  MinHealth: 0
+  takeDamageSound: {fileID: 0}
 --- !u!1 &777748278
 GameObject:
   m_ObjectHideFlags: 0
