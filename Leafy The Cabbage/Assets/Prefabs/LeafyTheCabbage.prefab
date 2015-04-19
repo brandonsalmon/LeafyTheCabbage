@@ -21,6 +21,7 @@ GameObject:
   - 114: {fileID: 11473320}
   - 198: {fileID: 19802598}
   - 199: {fileID: 19981598}
+  - 114: {fileID: 11409948}
   m_Layer: 0
   m_Name: LeafyTheCabbage
   m_TagString: Player
@@ -137,6 +138,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &11409948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f134a72db3255343959f70003cbc3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
