@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LadyBugMadness.unity
   - enabled: 1
+    path: Assets/Scenes/VenisOverlord.unity
+  - enabled: 1
     path: Assets/Scenes/SceneGato.unity

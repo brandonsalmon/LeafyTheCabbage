@@ -394,6 +394,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WingDelay: 1
   EnemyToChase: {fileID: 832191455}
+--- !u!1001 &131969628
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1509096195}
+    m_Modifications:
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 225.699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 125440, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_Name
+      value: LadyTheBug 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: CurrentHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: MaxHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446372, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: BulletDamageAmount
+      value: -20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &131969629 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_PrefabInternal: {fileID: 131969628}
+--- !u!1 &131969630 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125440, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_PrefabInternal: {fileID: 131969628}
+--- !u!114 &131969631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131969630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d77d5f90764712498b35f5bc837dc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WingDelay: 1
+  EnemyToChase: {fileID: 832191455}
 --- !u!1 &135287804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,7 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4cfd25318eb504eba24e85e8eb2abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: SceneGato
+  Scene: VenisOverlord
 --- !u!212 &1406790632
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3814,6 +3893,9 @@ Transform:
   - {fileID: 1432717970}
   - {fileID: 128348799}
   - {fileID: 775491131}
+  - {fileID: 1917760598}
+  - {fileID: 1799714423}
+  - {fileID: 131969629}
   m_Father: {fileID: 52743601}
   m_RootOrder: 11
 --- !u!1001 &1645854065
@@ -4087,6 +4169,85 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!1001 &1799714422
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1509096195}
+    m_Modifications:
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 205.699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 37.2000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 125440, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_Name
+      value: LadyTheBug 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: CurrentHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: MaxHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446372, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: BulletDamageAmount
+      value: -20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1799714423 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_PrefabInternal: {fileID: 1799714422}
+--- !u!1 &1799714424 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125440, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_PrefabInternal: {fileID: 1799714422}
+--- !u!114 &1799714425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799714424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d77d5f90764712498b35f5bc837dc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WingDelay: 1
+  EnemyToChase: {fileID: 832191455}
 --- !u!1 &1822434350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,6 +4516,85 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c6c101c0f6270a4ebf5885ec4366fb7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1917760597
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1509096195}
+    m_Modifications:
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 236.600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 31.1000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 125440, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: m_Name
+      value: LadyTheBug 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: CurrentHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415242, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: MaxHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446372, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+      propertyPath: BulletDamageAmount
+      value: -20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1917760598 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_PrefabInternal: {fileID: 1917760597}
+--- !u!1 &1917760599 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125440, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
+  m_PrefabInternal: {fileID: 1917760597}
+--- !u!114 &1917760600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917760599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d77d5f90764712498b35f5bc837dc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WingDelay: 1
+  EnemyToChase: {fileID: 832191455}
 --- !u!1001 &1920176317
 Prefab:
   m_ObjectHideFlags: 0
@@ -4626,11 +4866,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 137.5
+      value: 126.400002
       objectReference: {fileID: 0}
     - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 20.8999996
+      value: 24.2999992
       objectReference: {fileID: 0}
     - target: {fileID: 487256, guid: aea82c89364fc4049bd41946aeab47a1, type: 2}
       propertyPath: m_LocalPosition.z
