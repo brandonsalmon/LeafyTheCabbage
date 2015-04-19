@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelController : MonoBehaviour {
+public class LevelController : MonoBehaviour
+{
 
     private Vector2 LastCheckpoint { get; set; }
 
@@ -10,9 +11,13 @@ public class LevelController : MonoBehaviour {
         LastCheckpoint = position;
     }
 
-    public void ReloadPlayerAtCheckpoint()
+    public void ReloadPlayerAtCheckpoint(GameObject player)
     {
-        var player = GameObject.FindWithTag("Player");
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+
         player.transform.position = LastCheckpoint;
         var body = player.GetComponent<Rigidbody2D>();
         body.velocity = Vector2.zero;
