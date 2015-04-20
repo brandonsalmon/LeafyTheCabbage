@@ -7,14 +7,24 @@ public class BulletScript : MonoBehaviour {
 	// Public variable 
     public int Force = 50;
 
-
     // Gets called once when the bullet is created
     void Start ()
     {
-        var leafy = GameObject.FindWithTag("Player");
-        var orientation = leafy.GetComponent<MoveController>().Orientation;
+        var forceDirection = 1;
+        if (gameObject.tag == "Bullet")
+        {
+            Debug.Log("leaf");
+            var leafy = GameObject.FindWithTag("Player");
+            var orientation = leafy.GetComponent<MoveController>().Orientation;
 
-        var forceDirection = orientation == Orientation.Left ? (-1*Force) : Force;
+            forceDirection = orientation == Orientation.Left ? (-1 * Force) : Force;
+        }
+        else if (gameObject.tag == "Lazer")
+        {
+            // Something else?
+            Debug.Log("lazer!!");
+            forceDirection = Force;
+        }
 
         var rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.AddForce(Vector2.right * forceDirection, ForceMode2D.Impulse);
