@@ -170,7 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 50
   MaxHealth: 50
-  MinimumHealth: 0
+  MinHealth: 0
+  takeDamageSound: {fileID: 0}
 --- !u!114 &11488454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletInstaKill: 0
   BulletDamageAmount: -10
-  deathSound: {fileID: 8300000, guid: 343c7d7a3cd121344b9592d7282dbe51, type: 3}
+  deathSound: {fileID: 8300000, guid: e119aafe5b66a704f8944d70389bd3e5, type: 3}
 --- !u!212 &21211974
 SpriteRenderer:
   m_ObjectHideFlags: 1
