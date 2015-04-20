@@ -15,7 +15,7 @@ namespace Assets.Scripts.Character
         public GameObject Leafy;
         public HealthComponent HealthComp;
         private MoveController moveController;
-		private AudioSource audio;
+		private AudioSource audioSource;
 
         public Rect HealthBar;
         public int LazerDamage = -50;
@@ -29,7 +29,7 @@ namespace Assets.Scripts.Character
             HealthComp = this.GetComponent<HealthComponent>();
             HealthBar = new Rect(50, Screen.height - 50, Screen.width, Screen.height);
             this.moveController = this.gameObject.GetComponent<MoveController>();
-			this.audio = this.gameObject.GetComponent<AudioSource>();
+			this.audioSource = this.gameObject.GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -42,7 +42,7 @@ namespace Assets.Scripts.Character
 
                 gameObject.GetComponent<ParticleSystem>().Play();
                 this.LifeState = CharacterLifeState.Leafy_Dead;
-				this.audio.PlayOneShot(deathSound);
+				this.audioSource.PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
             }
 

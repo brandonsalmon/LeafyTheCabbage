@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HealthComponent : MonoBehaviour
 {
-	private AudioSource audio;
+	private AudioSource audioSource;
 
     public int CurrentHealth = 100;
     public int MaxHealth = 100;
@@ -25,7 +25,7 @@ public class HealthComponent : MonoBehaviour
 
     void Start()
     {
-		this.audio = gameObject.GetComponent<AudioSource>();
+		this.audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     public void UpdateHealth(int amount)
@@ -45,7 +45,7 @@ public class HealthComponent : MonoBehaviour
 			if (amount < 0)
 			{
 			    Damaged = true;
-				this.audio.PlayOneShot(takeDamageSound);
+				this.audioSource.PlayOneShot(takeDamageSound);
 			}
             CurrentHealth = newHealth;
         }

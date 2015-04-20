@@ -9,14 +9,14 @@ public class EnemyTakeDamageController : MonoBehaviour
     public int BulletDamageAmount = -10;
 
     private HealthComponent health;
-	private AudioSource audio;
+	private AudioSource audioSource;
 
     public AudioClip deathSound;
 
 	// Use this for initialization
 	void Start () {
-        health = gameObject.GetComponent<HealthComponent>();
-		audio = gameObject.GetComponent<AudioSource>();
+        this.health = gameObject.GetComponent<HealthComponent>();
+		this.audioSource = gameObject.GetComponent<AudioSource>();
 	}
 
     void OnCollisionEnter2D(Collision2D col)
@@ -53,7 +53,7 @@ public class EnemyTakeDamageController : MonoBehaviour
 
     void KillEnemy()
     {
-        this.audio.PlayOneShot(deathSound);
+        this.audioSource.PlayOneShot(deathSound);
         Destroy(gameObject);
     }
 }
