@@ -10,7 +10,7 @@ public class ExplodeAction : MonoBehaviour
     public KeyCode ExplodeKey = KeyCode.E;
     public int Damage = -50;
 
-	public AudioClip explodeSound;
+    public AudioClip explodeSound;
 
     void Update()
     {
@@ -28,14 +28,15 @@ public class ExplodeAction : MonoBehaviour
         {
             if (colliders[i].gameObject != gameObject)
             {
-                AddExplosionForce(colliders[i].gameObject.GetComponent<Rigidbody2D>(), this.Power*100, gameObject.transform.position, this.Radius);
+                AddExplosionForce(colliders[i].gameObject.GetComponent<Rigidbody2D>(), this.Power * 100, gameObject.transform.position, this.Radius);
                 var health = colliders[i].gameObject.GetComponent<HealthComponent>();
 
                 if (health != null)
                 {
                     health.UpdateHealth(Damage);
-                    if (health.IsDead)
+                    if (health.IsDead && colliders[i].gameObject.tag != "Player")
                     {
+                        Debug.Log(colliders[i].gameObject.tag);
                         Destroy(colliders[i].gameObject);
                     }
                 }
@@ -43,7 +44,7 @@ public class ExplodeAction : MonoBehaviour
         }
 
         gameObject.GetComponent<HealthComponent>().Kill();
-		gameObject.GetComponent<AudioSource>().PlayOneShot(explodeSound);
+        gameObject.GetComponent<AudioSource>().PlayOneShot(explodeSound);
 
         yield return null;
     }

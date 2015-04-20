@@ -4,13 +4,14 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class ShootScript : MonoBehaviour
 {
+	private AudioSource audio;
 
     public GameObject bullet;
 
     public bool BulletsEatHealth = true;
 
     public bool UseAI = false;
-
+	public AudioClip bulletSound;
     private float _nextShootTime;
 
     // Use this for initialization
@@ -30,6 +31,8 @@ public class ShootScript : MonoBehaviour
             // Create a new bullet at “transform.position”
             // Which is the current position of the game object
             Instantiate(bullet, new Vector2(transform.position.x + 1, transform.position.y + 1), Quaternion.identity);
+			this.audio.PlayOneShot(bulletSound, 0.7f);
+
 
             if (BulletsEatHealth)
             {
@@ -43,7 +46,6 @@ public class ShootScript : MonoBehaviour
             _nextShootTime -= Time.deltaTime;
             if (_nextShootTime < 0)
             {
-                Debug.Log("shoot");
                 Instantiate(bullet, transform.position, Quaternion.identity);
                 _nextShootTime = UnityEngine.Random.Range(1, 3);
             }
