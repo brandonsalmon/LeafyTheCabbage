@@ -151,7 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
   BulletsEatHealth: 1
-  bulletSound: {fileID: 8300000, guid: 2b5cf73c2b2eef94fbcd067bfcd7a479, type: 3}
+  UseAI: 0
+  bulletSound: {fileID: 8300000, guid: 7132722e1b83a8e409af7a94803674a0, type: 3}
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +251,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  LazerDamage: -50
   deathSound: {fileID: 8300000, guid: 179bb1cc4a371864896882795242abdb, type: 3}
 --- !u!114 &11486372
 MonoBehaviour:

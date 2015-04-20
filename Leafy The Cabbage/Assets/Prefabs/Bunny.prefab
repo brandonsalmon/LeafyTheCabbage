@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletInstaKill: 0
   BulletDamageAmount: -10
-  deathSound: {fileID: 8300000, guid: e119aafe5b66a704f8944d70389bd3e5, type: 3}
+  deathSound: {fileID: 8300000, guid: b766152632503a04791cafd256990f91, type: 3}
 --- !u!212 &21211974
 SpriteRenderer:
   m_ObjectHideFlags: 1
