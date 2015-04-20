@@ -18,6 +18,7 @@ namespace Assets.Scripts.Character
 		private AudioSource audio;
 
         public Rect HealthBar;
+        public int LazerDamage = -50;
 
 		public AudioClip deathSound;
 
@@ -49,6 +50,16 @@ namespace Assets.Scripts.Character
             // Set appropriate sprites
             //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);
+        }
+
+        void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.tag == "Lazer")
+            {
+                // Get rid of the lazer
+                Destroy(col.gameObject);
+                HealthComp.UpdateHealth(LazerDamage);
+            }
         }
 
         public void ResetLeafyAtCheckpoint()

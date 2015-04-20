@@ -52,8 +52,6 @@ public class EnemyTakeDamageController : MonoBehaviour
                 }
             }
         }
-
-        // TODO: damage from explosion
     }
 
     void KillEnemy()

@@ -17,6 +17,7 @@ public class ShootScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		this.audio = gameObject.GetComponent<AudioSource>();
         if (UseAI)
         {
             _nextShootTime = UnityEngine.Random.Range(1, 3);
@@ -46,7 +47,10 @@ public class ShootScript : MonoBehaviour
             _nextShootTime -= Time.deltaTime;
             if (_nextShootTime < 0)
             {
-                Instantiate(bullet, transform.position, Quaternion.identity);
+                //var yLocation = UnityEngine.Random.Range(transform.position.y + 50, transform.position.y +100);
+                //var xLocation = UnityEngine.Random.Range(transform.position.x - 8, transform.position.x - 15);
+                //Instantiate(bullet, new Vector2(yLocation, xLocation), Quaternion.identity);
+                Instantiate(bullet, new Vector2(transform.position.x - 8, transform.position.y), Quaternion.identity);
                 _nextShootTime = UnityEngine.Random.Range(1, 3);
             }
         }
