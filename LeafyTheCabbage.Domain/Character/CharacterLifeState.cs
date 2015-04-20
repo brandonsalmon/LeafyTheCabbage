@@ -7,9 +7,10 @@ namespace LeafyTheCabbage.Domain.Character
 {
     public enum CharacterLifeState
     {
-        Alive,
-        Tired,
-        Wounded,
-        Dead
+        Leafy_Idle,
+        Leafy_Tired,
+        Leafy_Sad,
+        Leafy_Dead,
+        Leafy_Happy
     }
 }
