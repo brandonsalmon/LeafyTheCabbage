@@ -13,7 +13,6 @@ public class BulletScript : MonoBehaviour {
         var forceDirection = 1;
         if (gameObject.tag == "Bullet")
         {
-            Debug.Log("leaf");
             var leafy = GameObject.FindWithTag("Player");
             var orientation = leafy.GetComponent<MoveController>().Orientation;
 
@@ -21,8 +20,6 @@ public class BulletScript : MonoBehaviour {
         }
         else if (gameObject.tag == "Lazer")
         {
-            // Something else?
-            Debug.Log("lazer!!");
             forceDirection = Force;
         }
 
@@ -38,6 +35,10 @@ public class BulletScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (gameObject.tag == "Lazer")
+        {
+            var rigidBody = GetComponent<Rigidbody2D>();
+            rigidBody.AddForce(Vector2.right * -1 * Force, ForceMode2D.Impulse);
+        }
 	}
 }
