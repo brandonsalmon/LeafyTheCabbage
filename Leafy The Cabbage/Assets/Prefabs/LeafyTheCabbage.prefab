@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823076709aa00f54c9fe1859d53037ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites: []
 --- !u!114 &11484870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1378,7 +1379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 508c8e1bd3dfe3f44b9a599ee033dc5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c46f906e1127d44429d10cf59f6b287c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
