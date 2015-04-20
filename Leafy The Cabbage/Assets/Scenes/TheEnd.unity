@@ -320,11 +320,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "THE END\r\n\r\nThanks for Playing\r\nCreated for Ludum Dare #32 An Unconventional
+  m_Text: "THE END\r\n\r\nThanks for Playing\r\nCreated for Ludum Dare #32: An Unconventional
     Weapon\r\n\r\nTeam Centare\r\nE.J. Bantz\r\nDaniel Laughland\r\nPatrick McElwee\r\nKelly
-    O'Callaghan\r\nJared Prather\r\nBrandon Salmon\r\n\r\nArtwork by\r\nE.J. Bantz\r\nJared
-    Prather\r\n\r\nEvil Lab Cabbage Theme Written and Performed by\r\nAmanda Langley\r\n\r\nCatering
-    by\r\nDaniel Laughland"
+    O'Callaghan\r\nJared Prather\r\nBrandon Salmon\r\n\r\nOriginal Artwork by\r\nE.J.
+    Bantz\r\nJared Prather\r\n\r\n\"Evil Lab Cabbage\"\nWritten and Performed by\r\nAmanda
+    Langley\r\n\r\nCatering by\r\nDaniel Laughland"
 --- !u!222 &651810174
 CanvasRenderer:
   m_ObjectHideFlags: 0
