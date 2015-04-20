@@ -21,6 +21,8 @@ public class HealthComponent : MonoBehaviour
 
     public bool Respawning { get; set; }
 
+    public bool Damaged { get; set; }
+
     void Start()
     {
 		this.audio = gameObject.GetComponent<AudioSource>();
@@ -42,6 +44,7 @@ public class HealthComponent : MonoBehaviour
         {
 			if (amount < 0)
 			{
+			    Damaged = true;
 				this.audio.PlayOneShot(takeDamageSound);
 			}
             CurrentHealth = newHealth;

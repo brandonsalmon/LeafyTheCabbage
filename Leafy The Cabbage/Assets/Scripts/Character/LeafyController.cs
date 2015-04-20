@@ -9,7 +9,7 @@ namespace Assets.Scripts.Character
 {
     public class LeafyController : MonoBehaviour
     {
-        public CharacterLifeState LifeState = CharacterLifeState.Alive;
+        public CharacterLifeState LifeState = CharacterLifeState.Leafy_Idle;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
 
         public GameObject Leafy;
@@ -45,12 +45,21 @@ namespace Assets.Scripts.Character
 				this.audio.PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
             }
+
+            if (!HealthComp.IsDead && HealthComp.Damaged)
+            {
+                this.LifeState = CharacterLifeState.Leafy_Tired;
+            }
+
+            if (!HealthComp.Damaged && !HealthComp.IsDead)
+            {
+                this.LifeState = CharacterLifeState.Leafy_Idle;
+            }
             MovementState = moveController.MovementState;
 
             // Set appropriate sprites
             this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);
-
         }
 
         void OnCollisionEnter2D(Collision2D col)
@@ -74,6 +83,7 @@ namespace Assets.Scripts.Character
         {
             yield return new WaitForSeconds(Random.value);
             Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
+            this.LifeState = CharacterLifeState.Leafy_Idle;
         }
 
         // HEALTH BAR:
