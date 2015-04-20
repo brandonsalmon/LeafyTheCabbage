@@ -17,6 +17,7 @@ public class ShootScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		this.audio = gameObject.GetComponent<AudioSource>();
         if (UseAI)
         {
             _nextShootTime = UnityEngine.Random.Range(1, 3);

@@ -54,6 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5176bc5591e0304ca4ace3c29b85b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointReachedSound: {fileID: 8300000, guid: e249f560295c7d84cb6a47334f884b5c,
+    type: 3}
 --- !u!212 &21267666
 SpriteRenderer:
   m_ObjectHideFlags: 1
