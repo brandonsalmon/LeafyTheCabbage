@@ -29,7 +29,7 @@ public class ShootScript : MonoBehaviour
         {
             // Create a new bullet at “transform.position”
             // Which is the current position of the game object
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            Instantiate(bullet, new Vector2(transform.position.x + 1, transform.position.y + 1), Quaternion.identity);
 
             if (BulletsEatHealth)
             {
@@ -43,6 +43,7 @@ public class ShootScript : MonoBehaviour
             _nextShootTime -= Time.deltaTime;
             if (_nextShootTime < 0)
             {
+                Debug.Log("shoot");
                 Instantiate(bullet, transform.position, Quaternion.identity);
                 _nextShootTime = UnityEngine.Random.Range(1, 3);
             }

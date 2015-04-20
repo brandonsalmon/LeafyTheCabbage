@@ -13,6 +13,7 @@ public class BulletScript : MonoBehaviour {
         var forceDirection = 1;
         if (gameObject.tag == "Bullet")
         {
+            Debug.Log("leaf");
             var leafy = GameObject.FindWithTag("Player");
             var orientation = leafy.GetComponent<MoveController>().Orientation;
 
@@ -21,7 +22,8 @@ public class BulletScript : MonoBehaviour {
         else if (gameObject.tag == "Lazer")
         {
             // Something else?
-            forceDirection = -1 * Force;
+            Debug.Log("lazer!!");
+            forceDirection = Force;
         }
 
         var rigidBody = GetComponent<Rigidbody2D>();
