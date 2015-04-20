@@ -151,7 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
   BulletsEatHealth: 1
-  bulletSound: {fileID: 8300000, guid: 2b5cf73c2b2eef94fbcd067bfcd7a479, type: 3}
+  UseAI: 0
+  bulletSound: {fileID: 0}
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +251,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  LazerDamage: -50
   deathSound: {fileID: 8300000, guid: 179bb1cc4a371864896882795242abdb, type: 3}
 --- !u!114 &11486372
 MonoBehaviour:
@@ -1376,7 +1378,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 508c8e1bd3dfe3f44b9a599ee033dc5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c46f906e1127d44429d10cf59f6b287c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

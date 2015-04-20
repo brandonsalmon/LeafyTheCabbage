@@ -41,15 +41,16 @@ namespace Assets.Scripts.Character
                 HealthComp.Respawning = true;
 
                 gameObject.GetComponent<ParticleSystem>().Play();
-                this.LifeState = CharacterLifeState.Dead;
+                this.LifeState = CharacterLifeState.Leafy_Dead;
 				this.audio.PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
             }
             MovementState = moveController.MovementState;
 
             // Set appropriate sprites
-            //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
+            this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);
+
         }
 
         void OnCollisionEnter2D(Collision2D col)
