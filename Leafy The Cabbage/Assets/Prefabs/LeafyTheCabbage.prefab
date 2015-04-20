@@ -152,7 +152,7 @@ MonoBehaviour:
   bullet: {fileID: 111440, guid: da33802628144fa4abbd59f08c2b1197, type: 2}
   BulletsEatHealth: 1
   UseAI: 0
-  bulletSound: {fileID: 0}
+  bulletSound: {fileID: 8300000, guid: 7132722e1b83a8e409af7a94803674a0, type: 3}
 --- !u!114 &11448520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823076709aa00f54c9fe1859d53037ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites: []
 --- !u!114 &11484870
 MonoBehaviour:
   m_ObjectHideFlags: 1
