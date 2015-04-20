@@ -2,8 +2,15 @@
 
 public class OpeningCinematic : MonoBehaviour
 {
+    public string NextScene;
+
     public void HideMe()
     {
-        gameObject.GetComponent<Renderer>().enabled = false;
+        Destroy(gameObject);
+    }
+
+    public void LoadStage()
+    {
+        Application.LoadLevel(NextScene);
     }
 }

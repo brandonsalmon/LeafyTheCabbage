@@ -2540,6 +2540,7 @@ GameObject:
   - 114: {fileID: 1416784223}
   - 82: {fileID: 1416784225}
   - 114: {fileID: 1416784226}
+  - 114: {fileID: 1416784227}
   m_Layer: 0
   m_Name: venis_idle
   m_TagString: Untagged
@@ -2860,6 +2861,18 @@ MonoBehaviour:
   BulletsEatHealth: 0
   UseAI: 1
   bulletSound: {fileID: 0}
+--- !u!114 &1416784227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1416784217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08441bb1fdb95c459e418099ed5c9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: SceneGato
 --- !u!1001 &1465404196
 Prefab:
   m_ObjectHideFlags: 0
