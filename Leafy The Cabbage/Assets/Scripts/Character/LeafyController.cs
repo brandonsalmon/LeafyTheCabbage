@@ -9,13 +9,13 @@ namespace Assets.Scripts.Character
 {
     public class LeafyController : MonoBehaviour
     {
-        public CharacterLifeState LifeState = CharacterLifeState.Alive;
+        public CharacterLifeState LifeState = CharacterLifeState.Leafy_Idle;
         public CharacterMovementState MovementState = CharacterMovementState.Idle;
 
         public GameObject Leafy;
         public HealthComponent HealthComp;
         private MoveController moveController;
-		private AudioSource audio;
+		private AudioSource audioSource;
 
         public Rect HealthBar;
         public int LazerDamage = -50;
@@ -29,7 +29,7 @@ namespace Assets.Scripts.Character
             HealthComp = this.GetComponent<HealthComponent>();
             HealthBar = new Rect(50, Screen.height - 50, Screen.width, Screen.height);
             this.moveController = this.gameObject.GetComponent<MoveController>();
-			this.audio = this.gameObject.GetComponent<AudioSource>();
+			this.audioSource = this.gameObject.GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -41,14 +41,24 @@ namespace Assets.Scripts.Character
                 HealthComp.Respawning = true;
 
                 gameObject.GetComponent<ParticleSystem>().Play();
-                this.LifeState = CharacterLifeState.Dead;
-				this.audio.PlayOneShot(deathSound);
+                this.LifeState = CharacterLifeState.Leafy_Dead;
+				this.audioSource.PlayOneShot(deathSound);
                 ResetLeafyAtCheckpoint();
+            }
+
+            if (!HealthComp.IsDead && HealthComp.Damaged)
+            {
+                this.LifeState = CharacterLifeState.Leafy_Tired;
+            }
+
+            if (!HealthComp.Damaged && !HealthComp.IsDead)
+            {
+                this.LifeState = CharacterLifeState.Leafy_Idle;
             }
             MovementState = moveController.MovementState;
 
             // Set appropriate sprites
-            //this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
+            this.GetComponent<CharacterLifeSpriteController>().SetState(LifeState);
             this.GetComponent<MovementSpriteController>().SetState(MovementState);
         }
 
@@ -73,6 +83,7 @@ namespace Assets.Scripts.Character
         {
             yield return new WaitForSeconds(Random.value);
             Leafy.GetComponentInParent<LevelController>().ReloadPlayerAtCheckpoint(Leafy);
+            this.LifeState = CharacterLifeState.Leafy_Idle;
         }
 
         // HEALTH BAR:

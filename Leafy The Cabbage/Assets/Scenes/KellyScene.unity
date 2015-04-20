@@ -2044,6 +2044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823076709aa00f54c9fe1859d53037ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites: []
 --- !u!114 &761925151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,6 +2066,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  LazerDamage: -50
   deathSound: {fileID: 0}
 --- !u!114 &761925152
 MonoBehaviour:
@@ -3594,10 +3596,6 @@ Prefab:
       propertyPath: CurrentHealth
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 11498504, guid: a67553ab6feab8549968749ddc921f5b, type: 2}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 343c7d7a3cd121344b9592d7282dbe51, type: 3}
     m_RemovedComponents:
     - {fileID: 11488454, guid: a67553ab6feab8549968749ddc921f5b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a67553ab6feab8549968749ddc921f5b, type: 2}
